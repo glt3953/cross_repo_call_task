@@ -1,0 +1,17 @@
+version = "1.0"
+
+[metadata]
+author = "cross-repo-examiner"
+difficulty = "hard"
+category = "cross-repo-api-integration"
+tags = ["swift", "http-client", "api-integration", "error-handling", "retry", "circuit-breaker"]
+
+[environment]
+image = "swift:5.9"
+resources = { cpu = 2, memory = "512Mi" }
+
+[verifier]
+timeout_seconds = 600
+
+[agent]
+timeout_seconds = 1800

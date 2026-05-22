@@ -1,0 +1,35 @@
+cross_repo_call_task/
+├── .gitignore
+├── Dockerfile
+├── Package.swift
+├── README.md
+├── instruction.md
+├── reward.txt
+├── task.toml
+├── test.sh
+├── test_docker.sh
+├── test_macOS.sh
+├── test_state.py
+├── solve.sh
+├── solve_docker.sh
+├── solve_macOS.sh
+├── Sources/
+│   ├── App.swift                     # 程序入口
+│   ├── ServiceA/                     # 订单服务（有 bug）
+│   │   ├── OrderModels.swift         # 数据模型
+│   │   ├── APIClient.swift           # HTTP 客户端（Bug #1-4）
+│   │   └── OrderHandler.swift        # 订单处理（Bug #5-6）
+│   └── ServiceB/                     # 库存服务（有 bug）
+│       ├── InventoryModels.swift     # 数据模型
+│       ├── InventoryManager.swift    # 库存管理（Bug #7-8）
+│       └── Server.swift              # HTTP 服务器（Bug #9-10）
+└── Solutions/
+    ├── App.swift                     # 程序入口（修复版）
+    ├── ServiceA/                     # 订单服务（修复版）
+    │   ├── OrderModels.swift
+    │   ├── APIClient_fixed.swift         # FIX #1-4
+    │   └── OrderHandler_fixed.swift      # FIX #5-6
+    └── ServiceB/                     # 库存服务（修复版）
+        ├── InventoryModels.swift
+        ├── InventoryManager_fixed.swift  # FIX #7-8
+        └── Server_fixed.swift            # FIX #9-10
